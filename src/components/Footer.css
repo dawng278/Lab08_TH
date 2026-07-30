@@ -1,0 +1,83 @@
+.site-footer {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 3rem 1.5rem;
+    border-top: 1px solid #f0f0f0;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.02);
+  
+    /* Cấu trúc Container bên trong */
+    & .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+  
+      /* Tự động chuyển sang hàng ngang trên màn hình Tablet/Desktop */
+      @media (min-width: 768px) {
+        flex-direction: row;
+        text-align: left;
+      }
+    }
+  
+    /* Logo & Tagline */
+    & .footer-brand {
+      text-align: center;
+  
+      @media (min-width: 768px) {
+        text-align: left;
+      }
+  
+      & .footer-logo {
+        font-size: 2rem; /* Chữ to nổi bật (~32px) */
+        font-weight: 900;
+        letter-spacing: 0.05em;
+        color: #000000;
+        margin: 0;
+  
+        & .highlight {
+          color: #de09e5; /* Điểm nhấn màu đỏ kiểu điện ảnh */
+        }
+      }
+  
+      & .footer-tagline {
+        font-size: 0.95rem;
+        color: #666666;
+        margin-top: 0.25rem;
+      }
+    }
+  
+    /* Menu liên kết (Chữ to 18px - Rõ ràng) */
+    & .footer-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 1.75rem;
+  
+      & a {
+        font-size: 1.125rem; /* ~18px */
+        font-weight: 700;
+        color: #333333;
+        text-decoration: none;
+        transition: color 0.2s ease, transform 0.2s ease;
+  
+        &:hover {
+          color: #e50914;
+          transform: translateY(-2px); /* Hiệu ứng nổi nhẹ khi di chuột */
+        }
+      }
+    }
+  
+    /* Dòng Copyright */
+    & .footer-copyright {
+      font-size: 1rem;
+      color: #777777;
+      text-align: center;
+  
+      & strong {
+        color: #111111;
+      }
+    }
+  }
