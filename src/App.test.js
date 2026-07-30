@@ -14,6 +14,11 @@ describe('App routing', () => {
     window.history.pushState({}, '', '/about');
     render(<App />);
 
-    expect(screen.getByRole('heading', { name: /about page/i })).toBeInTheDocument();
+    expect(
+      screen.getByRole('heading', {
+        name: /kết nối mọi người bằng tình yêu điện ảnh/i,
+      })
+    ).toBeInTheDocument();
+    expect(screen.getByText(/bốn cá tính, một mục tiêu chung/i)).toBeInTheDocument();
   });
 });
